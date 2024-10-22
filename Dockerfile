@@ -1,4 +1,4 @@
-FROM from ubuntu:20.04
+FROM ubuntu:20.04
 
 LABEL dock.schema-version="0.1"
 LABEL dock.img.name="annobrainer-docker-image"
