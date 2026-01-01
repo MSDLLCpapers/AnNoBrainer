@@ -4,8 +4,8 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 import os
 import sys
-sys.path.append('/SFS/user/ry/vagenkne/DST/NBB')
-sys.path.append('/SFS/user/ry/vagenkne/DST/')
+sys.path.append('/DST/NBB')
+sys.path.append('/DST/')
 
 import time
 import numpy as np

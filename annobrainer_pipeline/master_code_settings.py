@@ -35,7 +35,7 @@ def machine_specific_default_path():
     if os.name == "nt":
         return Path(os.environ["USERPROFILE"])
     else:
-        return Path("/SFS/user/ry/{}/".format(os.environ["USER"]))
+        return Path("/user/cluster/{}/".format(os.environ["USER"]))
 
 
 def validate_existing_config(config):
