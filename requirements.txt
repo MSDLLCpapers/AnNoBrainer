@@ -16,7 +16,7 @@ onnxruntime==1.13.1
 opencv-python==4.4.0.44
 packaging==23.0
 pandas==1.1.2
-Pillow==7.2.0
+Pillow==12.3.0
 protobuf==3.20.3
 pydantic==1.8
 pyparsing==2.4.7
