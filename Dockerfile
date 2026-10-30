@@ -1,4 +1,4 @@
-FROM from ubuntu:20.04
+FROM ubuntu:20.04
 
 LABEL dock.schema-version="0.1"
 LABEL dock.img.name="annobrainer-docker-image"
@@ -12,8 +12,10 @@ LABEL dock.docker.run='docker run -it -v "${STATIC_DIR_PATH}/static_data:/static
 
 RUN apt-get update && apt-get install -yq --no-install-recommends
 
+ENV TZ=Asia/Dubai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get install -yq python3.7 python3-pip git
-RUN apt-get install ffmpeg libsm6 libxext6 libgl1-mesa-glx  -y
+RUN apt-get install ffmpeg libsm6 libxext6 libgl1-mesa-glx unzip  -y
 
 # Upgrade pip, wheel and setuptools
 RUN pip3 install -U pip wheel setuptools
@@ -23,5 +25,9 @@ ADD requirements.txt /tmp/
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 ADD . /annoBrainer
 RUN cd /annoBrainer && git clone https://github.com/airlab-unibas/airlab.git
+RUN mkdir /annoBrainer/logs # create folder to stor logs
+COPY Example/support_data.zip /tmp/support_data.zip
+RUN unzip /tmp/support_data.zip -d /static_data
+
 # extract airlab library from the repo and remove the rest of the code
 RUN mv /annoBrainer/airlab /annoBrainer/airlab_source && mv /annoBrainer/airlab_source/airlab /annoBrainer/airlab && rm -R /annoBrainer/airlab_source

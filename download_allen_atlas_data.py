@@ -28,7 +28,7 @@ You acknowledge that any use of the Allen Mouse Brain Atlas content will be subj
 """
 print(license_test)
 user_agree = input()
-if user_agree != "yes":
+if user_agree.lower() != "yes":
     sys.exit("No data were downloaded")
 print("Starting to download the data...")
 ###############

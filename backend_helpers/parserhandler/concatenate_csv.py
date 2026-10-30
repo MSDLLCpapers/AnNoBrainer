@@ -1,8 +1,8 @@
 import csv
 import os
 
-target_file = "/Users/navratjo/Documents/TEMP/one_slide_cleaned 2/one_slide_cleaned_all1/registration_results/concatenated.csv"
-source_folder = "/Users/navratjo/Documents/TEMP/one_slide_cleaned 2/one_slide_cleaned_all1/registration_results/out"
+target_file = "data/concatenated.csv"
+source_folder = "data/out"
 
 with open(target_file, "w") as csv_write_file:
     csv_write = csv.writer(csv_write_file, delimiter=",")

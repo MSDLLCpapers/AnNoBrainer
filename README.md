@@ -33,8 +33,9 @@ git clone git@https://github.com/MSDLLCpapers/AnNoBrainer.git
 Docker build . -t annobrainer:0.1
 ```
 
+
 ### (Optional) Download allen mouse brain atlas data
-* The users can provide it's own refererence slides, instead of using Allen Mouse Brain ones
+* The users can provide it's own reference slides, instead of using Allen Mouse Brain ones
 * Before downloading data from Allen Institute, please read the license terms carefully 
 here: https://alleninstitute.org/terms-of-use/, make sure that you accept these terms
 * Run the download script 
@@ -48,5 +49,5 @@ Create a new folder with data you want to process or use a sample file for getti
 
 ### Run the pipeline in docker
 ```bash
-docker run -it -v "${STATIC_DIR_PATH}/static_data:/static_data" -v "${DATA_DIR_PATH}/Example:/input" --gpus all annobrainer:0.1 /annoBrainer/run_annobrainer.sh
+`docker run -it -v "${STATIC_DIR_PATH}/static_data:/static_data" -v "${DATA_DIR_PATH}/Example:/input" --gpus all annobrainer:0.1 `/annoBrainer/run_annobrainer.sh
 ```

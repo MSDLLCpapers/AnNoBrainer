@@ -180,7 +180,7 @@ path_svgs = path_atlas / "svg"
 
 
 path_atlas = Path(
-    "/ml_data//data/atlas_allen_complete"
+    "/ml_data/data/atlas_allen_complete"
 )
 target_size = (1296, 880)
 
