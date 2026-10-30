@@ -21,7 +21,7 @@ fastai @ https://github.com/fastai/fastai1/archive/master.zip
 fastcore==1.5.29
 fastdownload==0.0.7
 fastprogress==1.0.3
-filelock==3.13.1
+filelock==4.2.1
 fonttools==4.43.1
 fsspec==2023.10.0
 future==0.18.3
