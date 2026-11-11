@@ -32,6 +32,6 @@ sklearn==0.0
 sympy==1.10.1
 threadpoolctl==2.1.0
 tifffile==2020.9.22
-torch==1.4.0
+torch==2.13.0
 torchvision==0.5.0
 typing-extensions==3.7.4.3
